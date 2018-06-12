@@ -163,12 +163,13 @@ const addCurrency = (e) => {
   if(isNaN(currency)) {
     alert("Please only enter numbers.");
   } else {
-    // append new currency to list, but as a string with two decimals
-    li.innerHTML = currency.toFixed(2);
-    currencyList.appendChild(li);
-
-    // push new currency to array
+    // push new currency to array, currMinToMax depends on this array being up to date
     currencyArray.push(currency);
+
+    // APPEND NEW CURRENCY TO LIST
+    // in order to place new currency items in order when sort box is checked, call currMinToMax
+    currMinToMax(document.getElementById("curr-sort-checkbox").checked);
+
   }
 
 
@@ -177,12 +178,18 @@ const addCurrency = (e) => {
   document.getElementById("currency-entry").elements.namedItem("entry").value = "";
 }
 
-const currMinToMax = (e) => {
+const currSortCheckboxHandler = (e) => {
+  currMinToMax(e.target.checked);
+}
+
+const currMinToMax = (isChecked) => {
+  console.log("currMinToMax called");
   let currencyList = document.getElementById("currency-list");
   // empty list of integers in DOM
   while(currencyList.firstChild) currencyList.removeChild(currencyList.firstChild);
 
-  if(e.target.checked) {
+  if(isChecked) {
+    console.log("isChecked true");
     // sort toggled on, sort list and display
 
     // copy int array with slice(0), sort the copy by number rather than string (hence the compare function with a and b)
@@ -195,10 +202,14 @@ const currMinToMax = (e) => {
       currencyList.appendChild(li);
     }
   } else {
+    console.log("isChecked false");
+    console.log(currencyArray);
     // sort toggled off, display original list
     for(let i = 0; i < currencyArray.length; i++) {
       let li = document.createElement("li");
       li.innerHTML = currencyArray[i].toFixed(2);
+      console.log("hi");
+      console.log(li);
       currencyList.appendChild(li);
     }
   }
