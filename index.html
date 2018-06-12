@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Entry</title>
+
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1>Enter your Data</h1>
+    <h3>We've got a special place for your strings, integers, dates, and currencies</h3>
+  </header>
+  <div class="container">
+
+    <div class="data-section">
+      <!-- Strings -->
+      <form id="string-entry" onSubmit="addString(event);">
+        <input name="entry" type="text">
+        <input type="submit">
+      </form>
+
+      <ul id="string-list" class="list">
+
+      </ul>
+    </div>
+
+    <div class="data-section">
+      <!-- Integers -->
+      <form id="integer-entry" onSubmit="addInteger(event);">
+        <input name="entry" type="number">
+        <input type="submit">
+      </form>
+
+      <span>Sort from Min to Max <input id="int-sort-checkbox" type="checkbox" onClick="intSortCheckBoxHandler(event);"></span>
+      <ul id="integer-list" class="list">
+
+      </ul>
+    </div>
+
+    <div class="data-section">
+      <!-- Dates -->
+      <form id="date-entry" onSubmit="addDate(event);">
+        <input name="entry" type="date">
+        <input type="submit">
+      </form>
+
+      <ul id="date-list" class="list">
+
+      </ul>
+    </div>
+
+    <div class="data-section">
+      <!-- Currencies -->
+      <form id="currency-entry" onSubmit="addCurrency(event);">
+        <input name="entry" type="text">
+        <input type="submit">
+      </form>
+
+      <span>Sort from Min to Max <input type="checkbox" onClick="currMinToMax(event);"></span>
+      <ul id="currency-list" class="list">
+
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
