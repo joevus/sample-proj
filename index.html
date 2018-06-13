@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Data Entry</title>
 
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
   <link href="styles.css" rel="stylesheet">
 
 </head>
@@ -16,11 +17,11 @@
   </header>
   <div class="container">
 
-    <div class="data-section">
+    <div class="data-section col-xs-12 col-sm-6 col-md-3">
       <!-- Strings -->
       <form id="string-entry" onSubmit="addString(event);">
         <input name="entry" type="text">
-        <input type="submit">
+        <input class="btn btn-primary" type="submit">
       </form>
 
       <ul id="string-list" class="list">
@@ -28,11 +29,11 @@
       </ul>
     </div>
 
-    <div class="data-section">
+    <div class="data-section col-xs-12 col-sm-6 col-md-3">
       <!-- Integers -->
       <form id="integer-entry" onSubmit="addInteger(event);">
         <input name="entry" type="number">
-        <input type="submit">
+        <input class="btn btn-primary" type="submit">
       </form>
 
       <span>Sort from Min to Max <input id="int-sort-checkbox" type="checkbox" onClick="intSortCheckBoxHandler(event);"></span>
@@ -41,11 +42,11 @@
       </ul>
     </div>
 
-    <div class="data-section">
+    <div class="data-section col-xs-12 col-sm-6 col-md-3">
       <!-- Dates -->
       <form id="date-entry" onSubmit="addDate(event);">
         <input name="entry" type="date">
-        <input type="submit">
+        <input class="btn btn-primary" type="submit">
       </form>
 
       <ul id="date-list" class="list">
@@ -53,11 +54,11 @@
       </ul>
     </div>
 
-    <div class="data-section">
+    <div class="data-section col-xs-12 col-sm-6 col-md-3">
       <!-- Currencies -->
       <form id="currency-entry" onSubmit="addCurrency(event);">
         <input name="entry" type="text">
-        <input type="submit">
+        <input class="btn btn-primary" type="submit">
       </form>
 
       <span>Sort from Min to Max <input id="curr-sort-checkbox" type="checkbox" onClick="currSortCheckboxHandler(event);"></span>

@@ -1,10 +1,11 @@
 // Latest
 
-// Also want to try sorting new entries as add them when sort is toggled on.
+// Make it look good.
 
 // Done
 // Make currency accept decimals
 // Make inputs clear after submit.
+// Also want to try sorting new entries as add them when sort is toggled on.
 
 let strArray = [];
 let intArray = [];
