@@ -16,58 +16,85 @@
     <h3>We've got a special place for your strings, integers, dates, and currencies</h3>
   </header>
   <div class="container">
+    <div class="row">
+      <div class="data-section col-xs-12 col-sm-6 col-md-3">
+        <!-- Strings -->
+        <form id="string-entry" onSubmit="addString(event);">
+          <div class="form-group">
+            <input placeholder="strings of 6 - 20 characters " class="form-control" name="entry" type="text">
+          </div>
 
-    <div class="data-section col-xs-12 col-sm-6 col-md-3">
-      <!-- Strings -->
-      <form id="string-entry" onSubmit="addString(event);">
-        <input name="entry" type="text">
-        <input class="btn btn-primary" type="submit">
-      </form>
+          <input class="btn btn-primary" type="submit">
 
-      <ul id="string-list" class="list">
+        </form>
 
-      </ul>
-    </div>
+        <div class="list">
+          <ul id="string-list">
 
-    <div class="data-section col-xs-12 col-sm-6 col-md-3">
-      <!-- Integers -->
-      <form id="integer-entry" onSubmit="addInteger(event);">
-        <input name="entry" type="number">
-        <input class="btn btn-primary" type="submit">
-      </form>
+          </ul>
+        </div>
 
-      <span>Sort from Min to Max <input id="int-sort-checkbox" type="checkbox" onClick="intSortCheckBoxHandler(event);"></span>
-      <ul id="integer-list" class="list">
+      </div>
 
-      </ul>
-    </div>
+      <div class="data-section col-xs-12 col-sm-6 col-md-3">
+        <!-- Integers -->
+        <form id="integer-entry" onSubmit="addInteger(event);">
+          <div class="form-group">
+            <input placeholder="integers" class="form-control" name="entry" type="number">
+          </div>
 
-    <div class="data-section col-xs-12 col-sm-6 col-md-3">
-      <!-- Dates -->
-      <form id="date-entry" onSubmit="addDate(event);">
-        <input name="entry" type="date">
-        <input class="btn btn-primary" type="submit">
-      </form>
+          <input class="btn btn-primary" type="submit">
+        </form>
 
-      <ul id="date-list" class="list">
+        <div class="list">
+          <span class="sort-instruction">Sort from Min to Max <input id="int-sort-checkbox" type="checkbox" onClick="intSortCheckBoxHandler(event);"></span>
+          <ul id="integer-list">
 
-      </ul>
-    </div>
+          </ul>
+        </div>
 
-    <div class="data-section col-xs-12 col-sm-6 col-md-3">
-      <!-- Currencies -->
-      <form id="currency-entry" onSubmit="addCurrency(event);">
-        <input name="entry" type="text">
-        <input class="btn btn-primary" type="submit">
-      </form>
+      </div>
 
-      <span>Sort from Min to Max <input id="curr-sort-checkbox" type="checkbox" onClick="currSortCheckboxHandler(event);"></span>
-      <ul id="currency-list" class="list">
+      <div class="data-section col-xs-12 col-sm-6 col-md-3">
+        <!-- Dates -->
+        <form id="date-entry" onSubmit="addDate(event);">
+          <div class="form-group">
+            <input placeholder="dates" class="form-control" name="entry" type="date">
+          </div>
 
-      </ul>
-    </div>
+          <input class="btn btn-primary" type="submit">
+        </form>
 
-  </div>
+        <div class="list">
+          <ul id="date-list">
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="data-section col-xs-12 col-sm-6 col-md-3">
+        <!-- Currencies -->
+        <form id="currency-entry" onSubmit="addCurrency(event);">
+          <div class="form-group">
+            <input placeholder="currency amounts" class="form-control" name="entry" type="text">
+          </div>
+
+          <input class="btn btn-primary" type="submit">
+        </form>
+
+        <div class="list">
+          <span class="sort-instruction">Sort from Min to Max <input id="curr-sort-checkbox" type="checkbox" onClick="currSortCheckboxHandler(event);"></span>
+          <ul id="currency-list">
+
+          </ul>
+        </div>
+
+      </div>
+    </div> <!-- end row -->
+
+
+  </div> <!-- end container -->
 
   <script src="script.js"></script>
 </body>
