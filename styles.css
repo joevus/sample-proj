@@ -20,6 +20,19 @@ header {
   margin-top: 20px;
 }
 
+.alphabetize-instruction {
+  visibility: hidden;
+  text-align: right;
+  font-style: italic;
+  color: #007edf;
+}
+
+/* for checkbox */
+.alpha {
+  position: absolute;
+  right: 40px;
+}
+
 .sort-instruction {
   font-style: italic;
 }

@@ -59,7 +59,7 @@ const addString = (e) => {
   checkbox.addEventListener("click", alphabetize);
   const span = document.createElement("span");
   span.classList.add("alpha"); // for styling
-  span.innerHTML = "\u00A0\u00A0\u00A0alphabetize ";
+  //span.innerHTML = "\u00A0\u00A0\u00A0alphabetize ";
   span.appendChild(checkbox);
   const strNum = strArray.length;
 
@@ -216,3 +216,13 @@ const currMinToMax = (isChecked) => {
   }
 
 }
+
+// Make "alphabetize" appear when there is at least one list item in string list.
+let alphabetizeSpan = document.getElementsByClassName("alphabetize-instruction")[0];
+let checkAndShowAlphabetize = () => {
+  if(document.querySelector("#string-list li")) {
+    alphabetizeSpan.style.visibility = "visible";
+  }
+}
+
+setInterval(checkAndShowAlphabetize, 300);
